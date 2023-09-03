@@ -39,9 +39,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Check if all inserts were successful
     if ($success) {
-        echo '<script>alert("Submission Successful!!");</script>';
-        header("Location: ../pages/submitgroupinfo.html");
-        exit(); // Make sure to exit to prevent further script execution.
+        header("Location: ../pages/thankyou.html"); // Replace "dashboard.php" with the URL of the page you want to redirect to
+    exit();// Make sure to exit to prevent further script execution.
     }else {
         echo "Error: Some inserts failed. Check your data and try again.";
     }

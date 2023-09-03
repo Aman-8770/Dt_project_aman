@@ -26,6 +26,20 @@
     <link rel="stylesheet" href="../styles/all.css" />
     <link rel="stylesheet" href="../styles/style.css" />
     <title>SubmitGroupInfo</title>
+    <style>
+      /* Styles for the popup */
+      .popup {
+          display: none;
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: white;
+          padding: 20px;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+          z-index: 9999;
+      }
+  </style>
   </head>
 
   <body>
@@ -142,9 +156,10 @@
         <div class="container p-4 w-75 vh-100">
           <div class="row h-75 align-items-center justify-content-center">
             <form
-              class="my-auto"
-              action="../php/submitgroupinfo.php"
-              method="POST"
+            class="my-auto"
+            action="../php/submitgroupinfo.php"
+            method="POST"
+       
 
             >
               <div class="row mb-3">
@@ -161,7 +176,7 @@
                   <input
                     class="form-control"
                     type="text"
-                    maxlength="10"
+                    maxlength="100"
                     id="name1"
                     name="name1"
                     required
@@ -177,7 +192,7 @@
                   <input
                     class="form-control"
                     type="text"
-                    maxlength="12"
+                    maxlength="100"
                     id="enrollment1"
                     name="enrollment1"
                     required
@@ -207,7 +222,7 @@
                   <input
                     class="form-control"
                     type="text"
-                    maxlength="1"
+                    maxlength="100"
                     id="skills1"
                     name="skills1"
                     required
@@ -223,7 +238,7 @@
                   <input
                     class="form-control"
                     type="text"
-                    maxlength="1"
+                    maxlength="100"
                     id="areaofinterest1"
                     name="areaofinterest1"
                     required
@@ -245,7 +260,7 @@
                   <input
                     class="form-control"
                     type="text"
-                    maxlength="10"
+                    maxlength="100"
                     id="name2"
                     name="name2"
                     required
@@ -261,7 +276,7 @@
                   <input
                     class="form-control"
                     type="text"
-                    maxlength="10"
+                    maxlength="100"
                     id="enrollment2"
                     name="enrollment2"
                     required
@@ -291,7 +306,7 @@
                   <input
                     class="form-control"
                     type="text"
-                    maxlength="1"
+                    maxlength="100"
                     id="skills2"
                     name="skills2"
                     required
@@ -307,7 +322,7 @@
                   <input
                     class="form-control"
                     type="text"
-                    maxlength="1"
+                    maxlength="100"
                     id="areaofinterest2"
                     name="areaofinterest2"
                     required
@@ -329,7 +344,7 @@
                   <input
                     class="form-control"
                     type="text"
-                    maxlength="10"
+                    maxlength="100"
                     id="name3"
                     name="name3"
                     required
@@ -345,7 +360,7 @@
                   <input
                     class="form-control"
                     type="text"
-                    maxlength="10"
+                    maxlength="100"
                     id="enrollment3"
                     name="enrollment3"
                     required
@@ -375,7 +390,7 @@
                   <input
                     class="form-control"
                     type="text"
-                    maxlength="1"
+                    maxlength="100"
                     id="skills3"
                     name="skills3"
                     required
@@ -391,7 +406,7 @@
                   <input
                     class="form-control"
                     type="text"
-                    maxlength="1"
+                    maxlength="100"
                     id="areaofinterest3"
                     name="areaofinterest3"
                     required
@@ -413,7 +428,7 @@
                   <input
                     class="form-control"
                     type="text"
-                    maxlength="10"
+                    maxlength="100"
                     id="name4"
                     name="name4"
                     required
@@ -429,7 +444,7 @@
                   <input
                     class="form-control"
                     type="text"
-                    maxlength="10"
+                    maxlength="100"
                     id="enrollment4"
                     name="enrollment4"
                     required
@@ -459,7 +474,7 @@
                   <input
                     class="form-control"
                     type="text"
-                    maxlength="1"
+                    maxlength="100"
                     id="skills4"
                     name="skills4"
                     required
@@ -475,7 +490,7 @@
                   <input
                     class="form-control"
                     type="text"
-                    maxlength="1"
+                    maxlength="100"
                     id="areaofinterest4"
                     name="areaofinterest4"
                     required
@@ -492,7 +507,7 @@
                   <input
                     class="form-control"
                     type="text"
-                    maxlength="10"
+                    maxlength="100"
                     id="phoneNo"
                     name="phoneNo"
                     required
@@ -502,7 +517,7 @@
                   <input
                     class="form-control"
                     type="text"
-                    maxlength="10"
+                    maxlength="100"
                     id="phoneNo"
                     name="phoneNo"
                     required
@@ -706,11 +721,13 @@
                 <button
                   class="btn btn-lg btn-primary w-25 primary-bg"
                   type="submit"
+                  onclick=redirectToPage()
                 >
                   Submit
                 </button>
               </div>
             </form>
+            
           </div>
         </div>
 
@@ -728,6 +745,20 @@
       toggleButton.onclick = function () {
         el.classList.toggle("toggled");
       };
+     
+       
+        // Function to open the popup
+        // function openPopup() {
+        //     var popup = document.getElementById("myPopup");
+        //     popup.style.display = "block";
+        // }
+
+        // // Function to close the popup
+        // function closePopup() {
+        //     var popup = document.getElementById("myPopup");
+        //     popup.style.display = "none";
+        // }
+    
     </script>
   </body>
 </html>
