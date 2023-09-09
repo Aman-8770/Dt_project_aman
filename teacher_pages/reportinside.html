@@ -25,7 +25,7 @@
 
     <link rel="stylesheet" href="../styles/style.css" />
     <link rel="stylesheet" href="../styles/all.css" />
-    <title>Dashboard</title>
+    <title>View reports</title>
   </head>
 
   <body>
@@ -40,7 +40,7 @@
         <div class="list-group list-group-flush my-3">
           <a
             href="../teacher_pages/dashboard.html"
-            class="list-group-item list-group-item-action bg-transparent second-text fw-bold active"
+            class="list-group-item list-group-item-action bg-transparent second-text fw-bold"
             ><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a
           >
 
@@ -58,7 +58,7 @@
 
           <a
             href="../teacher_pages/ViewReport.html"
-            class="list-group-item list-group-item-action bg-transparent second-text fw-bold"
+            class="list-group-item list-group-item-action bg-transparent second-text fw-bold active"
             ><i class="fas fa-solid fa-address-card me-2"></i>View report</a
           >
 
@@ -81,7 +81,8 @@
               class="fas fa-solid fa-bars primary-text fs-4 me-3"
               id="menu-toggle"
             ></i>
-            <h2 class="fs-2 m-0"> Teacher Dashboard</h2>
+            <!-- <h2 class="fs-2 m-0">View reports</h2> -->
+            <h3>Group Report Information</h3>
           </div>
 
           <button
@@ -116,71 +117,51 @@
 
         <div class="container-fluid px-4">
           <div class="row g-3 my-2">
-            <!-- <div class="col-md-3">
-              <div
-                class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded"
-              >
-                <div>
-                  <h3 class="fs-2">View Profile</h3>
-                </div>
-                <i
-                  class="fas fa-brands fa-bitcoin fs-1 primary-text border rounded-full secondary-bg p-3"
-                ></i>
-              </div>
-            </div> -->
-
-            <!-- <div class="col-md-3">
-              <div
-                class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded"
-              >
-                <div>
-                  <h3 class="fs-2">Edit Profile</h3>
-                  <p class="fs-5">Placements</p>
-                </div>
-                <i
-                  class="fas fa-solid fa-briefcase fs-1 primary-text border rounded-full secondary-bg p-3"
-                ></i>
-              </div>
-            </div> -->
-
-            <!-- <div class="col-md-3">
-              <div
-                class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded"
-              >
-                <div>
-                  <h3 class="fs-2">Anouncements</h3>
-                  <p class="fs-5">NAAC Rating</p>
-                </div>
-                <i
-                  class="fas fa-solid fa-graduation-cap fs-1 primary-text border rounded-full secondary-bg p-3"
-                ></i>
-              </div>
-            </div> -->
-
-            <!-- <div class="col-md-3">
-              <div
-                class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded"
-              >
-                <div>
-                  <h3 class="fs-2">2900</h3>
-                  <p class="fs-5">Students</p>
-                </div>
-                <i
-                  class="fas fa-solid fa-people-group fs-1 primary-text border rounded-full secondary-bg p-3"
-                ></i>
-              </div>
+            <div class="d-flex" id="wrapper">
+                <!-- <div id="page-content-wrapper"> -->
+          
+                  <div class="container-fluid px-4">
+                    
+                    <div class="mt-4">
+                      
+                      <!-- Display group information here -->
+                      <p><strong>Group Number:</strong> 1</p>
+                      <p><strong>Project Title:</strong> Sample Project Title</p>
+                      <p>
+                        <strong>Github Link:</strong>
+                        <a href="#">https://github.com/sample</a>
+                      </p>
+                      <p>
+                        <strong>JIRA Link:</strong>
+                        <a href="#">https://jira.com/sample</a>
+                      </p>
+                    </div>
+          
+                    <div class="mt-4">
+                      <h3>Individual Contribution</h3>
+                      <!-- Display individual contributions for each student in the group -->
+                      <h4>Student 1</h4>
+                      <p>Student 1's contribution details go here.</p>
+          
+                      <h4>Student 2</h4>
+                      <p>Student 2's contribution details go here.</p>
+          
+                      <h4>Student 3</h4>
+                      <p>Student 3's contribution details go here.</p>
+          
+                      <h4>Student 4</h4>
+                      <p>Student 4's contribution details go here.</p>
+                    </div>
+          
+                    <div class="mt-4">
+                      <h3>Uploaded Report</h3>
+                      <!-- Display the uploaded report here -->
+                      <a href="#" download>Download Project Report</a>
+                    </div>
+                  </div>
+                <!-- </div> -->
             </div>
-          </div> -->
 
-          <!-- MAKE CHANGES FROM HERE ON -->
-          <div class="row my-5" style="text-align: center">
-            <h3 class="fs-4 mb-3">Welcome to Project Management System</h3>
-            <div class="col" style="text-align: center">
-              <img src="C:\Users\Lenovo\OneDrive\Desktop\images.png" style="border-radius: 10px " />
-            </div>
-          </div>
-
-          <!-- MAKE CHANGES ABOVE THIS -->
         </div>
       </div>
     </div>
