@@ -27,6 +27,21 @@
     <link rel="stylesheet" href="../styles/all.css" />
     <link rel="stylesheet" href="./dashboard.css" />
     <title>Dashboard</title>
+
+    <style>
+      /* Style for the calendar icon container */
+      body {
+    
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 3;
+}
+
+
+
+
+    </style>
   </head>
 
   <body>
@@ -213,6 +228,12 @@
       </div>
     </div>
 
+
+    <div id="calendar-container">
+      <div id="calendar-icon" onclick="openGoogleCalendar()">
+        <img src="calendar-icon.png" alt="calendar">
+      </div>
+    </div>
     <!-- /#page-content-wrapper -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
@@ -224,5 +245,17 @@
         el.classList.toggle("toggled");
       };
     </script>
+
+<script>
+  // Function to open Google Calendar
+  function openGoogleCalendar() {
+    // Replace 'YOUR_GOOGLE_CALENDAR_URL' with your actual Google Calendar URL
+    var googleCalendarUrl = "https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FKolkata&src=YW1hbmFncmF3YWw3MDg5QGdtYWlsLmNvbQ&src=MzQzM2Q0NjY2Zjg0ZGI3MTBhYzlmNmViZmY2MjFkMTZlMmU5OTE2ZDVkNGFlZjE1ZjdhYWU0ZmExOTRlYTc0MkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y2xhc3Nyb29tMTE3NDExMjAyMTE4ODQ2MzM3MDkxQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y2xhc3Nyb29tMTAyNDM2MDY8NTEwNTAzNzc5NTM3QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=Y2xhc3Nyb29tMTE2NzU2NTI1OTU1MjQ3NzE4NjU3QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=ZW4uaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4tZ2IuaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=Y2xhc3Nyb29tMTAwNDI1MDk5MDI2NTczNDQ1OTQwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20";
+
+
+    // Open the URL in a new tab or window
+    window.open(googleCalendarUrl, '_blank');
+  }
+</script>
   </body>
 </html>
