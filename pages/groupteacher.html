@@ -25,6 +25,7 @@
 
     <link rel="stylesheet" href="../styles/style.css" />
     <link rel="stylesheet" href="../styles/all.css" />
+    <link rel="stylesheet" href="./dashboard.css" />
     <title>Dashboard</title>
   </head>
 
@@ -39,31 +40,49 @@
         </div>
         <div class="list-group list-group-flush my-3">
           <a
-            href="../teacher_pages/dashboard.html"
+            href="../pages/dashboard.html"
             class="list-group-item list-group-item-action bg-transparent second-text fw-bold active"
             ><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a
           >
 
           <a
-            href="../teacher_pages/ViewGroups.html"
+            href="../pages/SubmitGroupInfo.html"
             class="list-group-item list-group-item-action bg-transparent second-text fw-bold"
-            ><i class="fas fa-brands fa-wpforms me-2"></i>View groups </a
+            ><i class="fas fa-brands fa-wpforms me-2"></i>Submit group information</a
           >
 
           <a
-            href="../teacher_pages/Uploadrubrics.html"
+            href="../pages/projectProposal.html"
             class="list-group-item list-group-item-action bg-transparent second-text fw-bold"
-            ><i class="fas fa-solid fa-scroll me-2"></i>Upload rubrics</a
+            ><i class="fas fa-brands fa-wpforms me-2"></i>Submit project proposals</a
           >
 
           <a
-            href="../teacher_pages/ViewReport.html"
+          href="../pages/Resources.html"
+          class="list-group-item list-group-item-action bg-transparent second-text fw-bold"
+          ><i class="fas fa-brands fa-wpforms me-2"></i>Resources</a
+        >
+
+          <a
+            href="../pages/ViewRubrics.html"
             class="list-group-item list-group-item-action bg-transparent second-text fw-bold"
-            ><i class="fas fa-solid fa-address-card me-2"></i>View report</a
+            ><i class="fas fa-solid fa-scroll me-2"></i>View rubrics</a
           >
 
           <a
-            href="../teacher_pages/signin.html"
+            href="../pages/SubmitReport.html"
+            class="list-group-item list-group-item-action bg-transparent second-text fw-bold"
+            ><i class="fas fa-solid fa-address-card me-2"></i>Submit report</a
+          >
+
+          <a
+            href="../pages/SelfNote.html"
+            class="list-group-item list-group-item-action bg-transparent second-text fw-bold"
+            ><i class="fas fa-solid fa-address-card me-2"></i>Self Note</a
+          >
+
+          <a
+            href="../pages/signin.html"
             class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"
             ><i class="fas fa-power-off me-2"></i>Logout</a
           >
@@ -81,7 +100,7 @@
               class="fas fa-solid fa-bars primary-text fs-4 me-3"
               id="menu-toggle"
             ></i>
-            <h2 class="fs-2 m-0"> Teacher Dashboard</h2>
+            <h2 class="fs-2 m-0">dashboard</h2>
           </div>
 
           <button
@@ -116,6 +135,15 @@
 
         <div class="container-fluid px-4">
           <div class="row g-3 my-2">
+
+            <div class="validation-container valid">
+              Group Validation pending
+            </div>
+
+            <div class="validation-container valid">
+              Project validation pending
+            </div>
+
             <!-- <div class="col-md-3">
               <div
                 class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded"
@@ -148,7 +176,7 @@
                 class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded"
               >
                 <div>
-                  <h3 class="fs-2">Anouncements</h3>
+                  <h3 class="fs-2">View rubrics</h3>
                   <p class="fs-5">NAAC Rating</p>
                 </div>
                 <i
@@ -198,4 +226,3 @@
     </script>
   </body>
 </html>
-

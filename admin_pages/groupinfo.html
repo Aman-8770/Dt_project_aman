@@ -25,7 +25,52 @@
 
     <link rel="stylesheet" href="../styles/style.css" />
     <link rel="stylesheet" href="../styles/all.css" />
-    <title>Dashboard</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        text-align: center;
+      }
+
+      .container {
+        background-color: #fff;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      .student {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #fff;
+        text-align: left;
+      }
+
+      .student h2 {
+        margin-top: 0;
+        color: #333;
+      }
+
+      .student p {
+        margin: 5px 0;
+        color: #666;
+      }
+
+      .average-cgpa {
+        font-weight: bold;
+      }
+    </style>
+
+    <title>Groupinfo</title>
   </head>
 
   <body>
@@ -39,21 +84,21 @@
         </div>
         <div class="list-group list-group-flush my-3">
           <a
-            href="../teacher_pages/dashboard.html"
+            href="../admin_pages/admiindashboard.html"
             class="list-group-item list-group-item-action bg-transparent second-text fw-bold active"
             ><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a
           >
 
           <a
-            href="../teacher_pages/ViewGroups.html"
+            href="../admin_pages/groupteacher.html"
             class="list-group-item list-group-item-action bg-transparent second-text fw-bold"
-            ><i class="fas fa-brands fa-wpforms me-2"></i>View groups </a
-          >
+            ><i class="fas fa-brands fa-wpforms me-2"></i>Assignment of mentors
+          </a>
 
           <a
-            href="../teacher_pages/Uploadrubrics.html"
+            href="../admin_pages/validategroups.html"
             class="list-group-item list-group-item-action bg-transparent second-text fw-bold"
-            ><i class="fas fa-solid fa-scroll me-2"></i>Upload rubrics</a
+            ><i class="fas fa-solid fa-scroll me-2"></i>Validate groups</a
           >
 
           <a
@@ -81,7 +126,7 @@
               class="fas fa-solid fa-bars primary-text fs-4 me-3"
               id="menu-toggle"
             ></i>
-            <h2 class="fs-2 m-0"> Teacher Dashboard</h2>
+            <h2 class="fs-2 m-0">Group information</h2>
           </div>
 
           <button
@@ -116,71 +161,39 @@
 
         <div class="container-fluid px-4">
           <div class="row g-3 my-2">
-            <!-- <div class="col-md-3">
-              <div
-                class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded"
-              >
-                <div>
-                  <h3 class="fs-2">View Profile</h3>
-                </div>
-                <i
-                  class="fas fa-brands fa-bitcoin fs-1 primary-text border rounded-full secondary-bg p-3"
-                ></i>
+            <div class="container">
+              <h1>Student Group Information</h1>
+              <div class="student">
+                <h2>Student 1</h2>
+                <p>Name: John Doe</p>
+                <p>CGPA: 3.75</p>
+                <p>Skills: Web Development, Java</p>
+                <p>Area of Interest: Programming, AI</p>
               </div>
-            </div> -->
-
-            <!-- <div class="col-md-3">
-              <div
-                class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded"
-              >
-                <div>
-                  <h3 class="fs-2">Edit Profile</h3>
-                  <p class="fs-5">Placements</p>
-                </div>
-                <i
-                  class="fas fa-solid fa-briefcase fs-1 primary-text border rounded-full secondary-bg p-3"
-                ></i>
+              <div class="student">
+                <h2>Student 2</h2>
+                <p>Name: Jane Smith</p>
+                <p>CGPA: 3.85</p>
+                <p>Skills: Data Analysis, Python</p>
+                <p>Area of Interest: Data Science, Machine Learning</p>
               </div>
-            </div> -->
-
-            <!-- <div class="col-md-3">
-              <div
-                class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded"
-              >
-                <div>
-                  <h3 class="fs-2">Anouncements</h3>
-                  <p class="fs-5">NAAC Rating</p>
-                </div>
-                <i
-                  class="fas fa-solid fa-graduation-cap fs-1 primary-text border rounded-full secondary-bg p-3"
-                ></i>
+              <div class="student">
+                <h2>Student 3</h2>
+                <p>Name: Bob Johnson</p>
+                <p>CGPA: 3.65</p>
+                <p>Skills: Graphic Design, Photoshop</p>
+                <p>Area of Interest: Design, Multimedia</p>
               </div>
-            </div> -->
-
-            <!-- <div class="col-md-3">
-              <div
-                class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded"
-              >
-                <div>
-                  <h3 class="fs-2">2900</h3>
-                  <p class="fs-5">Students</p>
-                </div>
-                <i
-                  class="fas fa-solid fa-people-group fs-1 primary-text border rounded-full secondary-bg p-3"
-                ></i>
+              <div class="student">
+                <h2>Student 4</h2>
+                <p>Name: Alice Brown</p>
+                <p>CGPA: 3.95</p>
+                <p>Skills: Mobile App Development, Swift</p>
+                <p>Area of Interest: Mobile Development, iOS</p>
               </div>
-            </div>
-          </div> -->
-
-          <!-- MAKE CHANGES FROM HERE ON -->
-          <div class="row my-5" style="text-align: center">
-            <h3 class="fs-4 mb-3">Welcome to Project Management System</h3>
-            <div class="col" style="text-align: center">
-              <img src="C:\Users\Lenovo\OneDrive\Desktop\images.png" style="border-radius: 10px " />
+              <p class="average-cgpa">Average CGPA of the Group: 3.80</p>
             </div>
           </div>
-
-          <!-- MAKE CHANGES ABOVE THIS -->
         </div>
       </div>
     </div>
@@ -198,4 +211,3 @@
     </script>
   </body>
 </html>
-
