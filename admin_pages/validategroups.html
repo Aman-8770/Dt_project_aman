@@ -25,7 +25,28 @@
 
     <link rel="stylesheet" href="../styles/style.css" />
     <link rel="stylesheet" href="../styles/all.css" />
-    <title>Dashboard</title>
+
+    <style>
+      table {
+        width: 80%;
+        border-collapse: collapse;
+        margin: 20px auto; /* Center the table on the page */
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+
+    <title>Validat groups</title>
   </head>
 
   <body>
@@ -39,31 +60,31 @@
         </div>
         <div class="list-group list-group-flush my-3">
           <a
-            href="../pages/dashboard.html"
-            class="list-group-item list-group-item-action bg-transparent second-text fw-bold active"
+            href="../admin_pages/admiindashboard.html"
+            class="list-group-item list-group-item-action bg-transparent second-text fw-bold"
             ><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a
           >
 
           <a
-            href="../pages/ViewGroups.html"
+            href="../admin_pages/groupteacher.html"
             class="list-group-item list-group-item-action bg-transparent second-text fw-bold"
-            ><i class="fas fa-brands fa-wpforms me-2"></i>View groups </a
+            ><i class="fas fa-brands fa-wpforms me-2"></i>Assignment of mentors
+          </a>
+
+          <a
+            href="../admin_pages/validategroups"
+            class="list-group-item list-group-item-action bg-transparent second-text fw-bold active"
+            ><i class="fas fa-solid fa-scroll me-2"></i>Validate groups</a
           >
 
           <a
-            href="../pages/Uploadrubrics.html"
-            class="list-group-item list-group-item-action bg-transparent second-text fw-bold"
-            ><i class="fas fa-solid fa-scroll me-2"></i>Upload rubrics</a
-          >
-
-          <a
-            href="../pages/ViewReport.html"
+            href="../teacher_pages/ViewReport.html"
             class="list-group-item list-group-item-action bg-transparent second-text fw-bold"
             ><i class="fas fa-solid fa-address-card me-2"></i>View report</a
           >
 
           <a
-            href="../pages/signin.html"
+            href="../teacher_pages/signin.html"
             class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"
             ><i class="fas fa-power-off me-2"></i>Logout</a
           >
@@ -81,7 +102,7 @@
               class="fas fa-solid fa-bars primary-text fs-4 me-3"
               id="menu-toggle"
             ></i>
-            <h2 class="fs-2 m-0"> Teacher Dashboard</h2>
+            <h2 class="fs-2 m-0">Validate groups</h2>
           </div>
 
           <button
@@ -116,71 +137,39 @@
 
         <div class="container-fluid px-4">
           <div class="row g-3 my-2">
-            <div class="col-md-3">
-              <div
-                class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded"
-              >
-                <div>
-                  <h3 class="fs-2">View Profile</h3>
-                </div>
-                <!-- <i
-                  class="fas fa-brands fa-bitcoin fs-1 primary-text border rounded-full secondary-bg p-3"
-                ></i> -->
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div
-                class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded"
-              >
-                <div>
-                  <h3 class="fs-2">Edit Profile</h3>
-                  <!-- <p class="fs-5">Placements</p> -->
-                </div>
-                <!-- <i
-                  class="fas fa-solid fa-briefcase fs-1 primary-text border rounded-full secondary-bg p-3"
-                ></i> -->
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div
-                class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded"
-              >
-                <div>
-                  <h3 class="fs-2">Anouncements</h3>
-                  <!-- <p class="fs-5">NAAC Rating</p> -->
-                </div>
-                <!-- <i
-                  class="fas fa-solid fa-graduation-cap fs-1 primary-text border rounded-full secondary-bg p-3"
-                ></i> -->
-              </div>
-            </div>
-
-            <!-- <div class="col-md-3">
-              <div
-                class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded"
-              >
-                <div>
-                  <h3 class="fs-2">2900</h3>
-                  <p class="fs-5">Students</p>
-                </div>
-                <i
-                  class="fas fa-solid fa-people-group fs-1 primary-text border rounded-full secondary-bg p-3"
-                ></i>
-              </div>
-            </div>
-          </div> -->
-
-          <!-- MAKE CHANGES FROM HERE ON -->
-          <div class="row my-5" style="text-align: center">
-            <h3 class="fs-4 mb-3">Welcome to Project Management System</h3>
-            <div class="col" style="text-align: center">
-              <img src="C:\Users\Lenovo\OneDrive\Desktop\images.png" style="border-radius: 10px " />
-            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th style="background-color: rgb(88, 88, 241)">
+                    Group Number
+                  </th>
+                  <th style="background-color: rgb(88, 88, 241)">
+                    Validation status
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="shashank" style="background-color: aliceblue">
+                    Group 1
+                  </td>
+                  <td style="background-color: green">Validated</td>
+                </tr>
+                <tr>
+                  <td style="background-color: aliceblue">Group 2</td>
+                  <td style="background-color: red">Not validated</td>
+                </tr>
+                <tr>
+                  <td style="background-color: aliceblue">Group 3</td>
+                  <td style="background-color: red">Not validated</td>
+                </tr>
+                <tr>
+                  <td style="background-color: aliceblue">Group 4</td>
+                  <td style="background-color: green">Validated</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-
-          <!-- MAKE CHANGES ABOVE THIS -->
         </div>
       </div>
     </div>
@@ -195,6 +184,13 @@
       toggleButton.onclick = function () {
         el.classList.toggle("toggled");
       };
+
+      let a = document.querySelector(".shashank");
+      a.addEventListener(onclick, redirect());
+
+      function redirect() {
+        window.location.href = "../admin_pages/groupinfo.html";
+      }
     </script>
   </body>
 </html>
