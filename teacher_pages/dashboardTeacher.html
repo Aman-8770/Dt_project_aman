@@ -25,6 +25,22 @@
 
     <link rel="stylesheet" href="../styles/style.css" />
     <link rel="stylesheet" href="../styles/all.css" />
+
+    <style>
+      .validation-container {
+  width: 200px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin: 20px;
+}
+    </style>
     <title>Dashboard</title>
   </head>
 
@@ -173,6 +189,13 @@
           </div> -->
 
           <!-- MAKE CHANGES FROM HERE ON -->
+
+          <div id="calendar-container" class="validation-container valid" style="background-color: rgb(72, 0, 255);">
+            <div id="calendar-icon" onclick="openGoogleCalendar()">
+              <img src="calendar-icon.png" alt="calendar">
+            </div>
+          </div>
+
           <div class="row my-5" style="text-align: center">
             <h3 class="fs-4 mb-3">Welcome to Project Management System</h3>
             <div class="col" style="text-align: center">
@@ -196,6 +219,19 @@
         el.classList.toggle("toggled");
       };
     </script>
+
+    <script>
+      // Function to open Google Calendar
+      function openGoogleCalendar() {
+        // Replace 'YOUR_GOOGLE_CALENDAR_URL' with your actual Google Calendar URL
+        var googleCalendarUrl = "https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FKolkata&src=YW1hbmFncmF3YWw3MDg5QGdtYWlsLmNvbQ&src=MzQzM2Q0NjY2Zjg0ZGI3MTBhYzlmNmViZmY2MjFkMTZlMmU5OTE2ZDVkNGFlZjE1ZjdhYWU0ZmExOTRlYTc0MkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y2xhc3Nyb29tMTE3NDExMjAyMTE4ODQ2MzM3MDkxQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y2xhc3Nyb29tMTAyNDM2MDY8NTEwNTAzNzc5NTM3QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=Y2xhc3Nyb29tMTE2NzU2NTI1OTU1MjQ3NzE4NjU3QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=ZW4uaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4tZ2IuaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=Y2xhc3Nyb29tMTAwNDI1MDk5MDI2NTczNDQ1OTQwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20";
+
+
+        // Open the URL in a new tab or window
+        window.open(googleCalendarUrl, '_blank');
+      }
+    </script>
+
   </body>
 </html>
 
