@@ -29,17 +29,17 @@
     <style>
       /* Styles for the popup */
       .popup {
-          display: none;
-          position: fixed;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          background-color: white;
-          padding: 20px;
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-          z-index: 9999;
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        z-index: 9999;
       }
-  </style>
+    </style>
   </head>
 
   <body>
@@ -156,11 +156,9 @@
         <div class="container p-4 w-75 vh-100">
           <div class="row h-75 align-items-center justify-content-center">
             <form
-            class="my-auto"
-            action="../php/submitgroupinfo.php"
-            method="POST"
-       
-
+              class="my-auto"
+              action="../php/submitgroupinfo.php"
+              method="POST"
             >
               <div class="row mb-3">
                 <label for="phoneNo" class="col-sm-3 col-form-label"
@@ -498,236 +496,16 @@
                 </div>
               </div>
 
-              <!-- <div class="row mb-3">
-                <label for="phoneNo" class="col-sm-3 col-form-label"
-                  >Student - 1</label
-                >
-                <label for="phoneNo">Name: </label>
-                <div class="s_1">
-                  <input
-                    class="form-control"
-                    type="text"
-                    maxlength="100"
-                    id="phoneNo"
-                    name="phoneNo"
-                    required
-                  />
-                </div>
-                <div class="s_1">
-                  <input
-                    class="form-control"
-                    type="text"
-                    maxlength="100"
-                    id="phoneNo"
-                    name="phoneNo"
-                    required
-                  />
-                </div>
-                <div class="s_1">
-                  <input
-                    class="form-control"
-                    type="text"
-                    maxlength="10"
-                    id="phoneNo"
-                    name="phoneNo"
-                    required
-                  />
-                </div>
-                <div class="s_1">
-                  <input
-                    class="form-control"
-                    type="text"
-                    maxlength="10"
-                    id="phoneNo"
-                    name="phoneNo"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div class="row mb-3">
-                <label for="branch" class="col-sm-3 col-form-label">CGPA</label>
-
-                <div class="C_1">
-                  <input
-                    class="form-control"
-                    type="number"
-                    id="branch"
-                    name="branch"
-                    required
-                  />
-                </div>
-                <div class="C_1">
-                  <input
-                    class="form-control"
-                    type="number"
-                    id="branch"
-                    name="branch"
-                    required
-                  />
-                </div>
-                <div class="C_1">
-                  <input
-                    class="form-control"
-                    type="number"
-                    id="branch"
-                    name="branch"
-                    required
-                  />
-                </div>
-                <div class="C_1">
-                  <input
-                    class="form-control"
-                    type="number"
-                    id="branch"
-                    name="branch"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div class="row mb-3">
-                <label for="currentYear" class="col-sm-3 col-form-label"
-                  >Skills</label
-                > -->
-              <!-- <div class="sk_1">
-                  <input
-                    class="form-control"
-                    type="text"
-                    id="currentYear"
-                    name="currentYear"
-                    required
-                  /><br />
-                </div>
-                <div class="sk_1">
-                  <input
-                    class="form-control"
-                    type="text"
-                    maxlength="1"
-                    id="currentYear"
-                    name="currentYear"
-                    required
-                  /><br />
-                </div>
-                <div class="sk_1">
-                  <input
-                    class="form-control"
-                    type="text"
-                    maxlength="1"
-                    id="currentYear"
-                    name="currentYear"
-                    required
-                  /><br />
-                </div>
-                <div class="sk_1">
-                  <input
-                    class="form-control"
-                    type="text"
-                    maxlength="1"
-                    id="currentYear"
-                    name="currentYear"
-                    required
-                  /><br />
-                </div> -->
-
-              <!-- <div class="C_1">
-                  <input
-                    class="form-control"
-                    type="text"
-                    id="branch"
-                    name="branch"
-                    required
-                  />
-                </div>
-                <div class="C_1">
-                  <input
-                    class="form-control"
-                    type="text"
-                    id="branch"
-                    name="branch"
-                    required
-                  />
-                </div>
-                <div class="C_1">
-                  <input
-                    class="form-control"
-                    type="text"
-                    id="branch"
-                    name="branch"
-                    required
-                  />
-                </div>
-                <div class="C_1">
-                  <input
-                    class="form-control"
-                    type="text"
-                    id="branch"
-                    name="branch"
-                    required
-                  />
-                </div>
-              </div> -->
-
-              <!-- <div class="row mb-3">
-                <label for="gender" class="col-sm-4 col-form-label"
-                  >Gender</label
-                >
-                <div class="col-sm-8 container-fluid">
-                  <div class="form-check form-check-inline col-sm-5">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      id="male"
-                      name="gender"
-                      value="M"
-                      required
-                    />
-                    <label class="form-check-label" for="male">Male</label>
-                  </div>
-
-                  <div class="form-check form-check-inline col-sm-4">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      id="female"
-                      name="gender"
-                      value="F"
-                      required
-                    />
-                    <label class="form-check-label" for="female">Female</label>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row mb-3">
-                <label for="feePaid" class="col-sm-4 col-form-label"
-                  >Fee paid</label
-                >
-                <div class="col-sm-8 container-fluid">
-                  <div class="form-check col-sm-5">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      id="yes"
-                      name="feePaid"
-                      value="1"
-                      required
-                    />
-                  </div>
-                </div>
-              </div> -->
-
               <div class="row justify-content-center py-5">
                 <button
                   class="btn btn-lg btn-primary w-25 primary-bg"
                   type="submit"
-                  onclick=redirectToPage()
+                  onclick="redirectToPage()"
                 >
                   Submit
                 </button>
               </div>
             </form>
-            
           </div>
         </div>
 
@@ -745,20 +523,18 @@
       toggleButton.onclick = function () {
         el.classList.toggle("toggled");
       };
-     
-       
-        // Function to open the popup
-        // function openPopup() {
-        //     var popup = document.getElementById("myPopup");
-        //     popup.style.display = "block";
-        // }
 
-        // // Function to close the popup
-        // function closePopup() {
-        //     var popup = document.getElementById("myPopup");
-        //     popup.style.display = "none";
-        // }
-    
+      // Function to open the popup
+      // function openPopup() {
+      //     var popup = document.getElementById("myPopup");
+      //     popup.style.display = "block";
+      // }
+
+      // // Function to close the popup
+      // function closePopup() {
+      //     var popup = document.getElementById("myPopup");
+      //     popup.style.display = "none";
+      // }
     </script>
   </body>
 </html>
