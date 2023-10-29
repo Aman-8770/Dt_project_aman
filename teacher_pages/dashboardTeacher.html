@@ -61,25 +61,31 @@
           >
 
           <a
-            href="../teacher_pages/ViewGroups.html"
+            href="../teacher_pages/ViewGroups.php"
             class="list-group-item list-group-item-action bg-transparent second-text fw-bold"
             ><i class="fas fa-brands fa-wpforms me-2"></i>View groups </a
           >
 
           <a
-            href="../teacher_pages/Uploadrubrics.html"
+            href="../teacher_pages/evaluation.php"
             class="list-group-item list-group-item-action bg-transparent second-text fw-bold"
-            ><i class="fas fa-solid fa-scroll me-2"></i>Upload rubrics</a
+            ><i class="fas fa-solid fa-address-card me-2"></i>Evaluation</a
           >
 
           <a
-            href="../teacher_pages/ViewReport.html"
+            href="../teacher_pages/view_evaluation.php"
+            class="list-group-item list-group-item-action bg-transparent second-text fw-bold"
+            ><i class="fas fa-solid fa-address-card me-2"></i> View Evaluation</a
+          >
+
+          <a
+            href="../teacher_pages/ViewReport.php"
             class="list-group-item list-group-item-action bg-transparent second-text fw-bold"
             ><i class="fas fa-solid fa-address-card me-2"></i>View report</a
           >
 
           <a
-            href="../teacher_pages/signin.html"
+            href="../teacher_pages/signinTeacher.html"
             class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"
             ><i class="fas fa-power-off me-2"></i>Logout</a
           >
@@ -97,7 +103,7 @@
               class="fas fa-solid fa-bars primary-text fs-4 me-3"
               id="menu-toggle"
             ></i>
-            <h2 class="fs-2 m-0"> Teacher Dashboard</h2>
+            <h2 class="fs-2 m-0"> Faculty Dashboard</h2>
           </div>
 
           <button
@@ -132,67 +138,20 @@
 
         <div class="container-fluid px-4">
           <div class="row g-3 my-2">
-            <!-- <div class="col-md-3">
-              <div
-                class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded"
-              >
-                <div>
-                  <h3 class="fs-2">View Profile</h3>
-                </div>
-                <i
-                  class="fas fa-brands fa-bitcoin fs-1 primary-text border rounded-full secondary-bg p-3"
-                ></i>
-              </div>
-            </div> -->
-
-            <!-- <div class="col-md-3">
-              <div
-                class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded"
-              >
-                <div>
-                  <h3 class="fs-2">Edit Profile</h3>
-                  <p class="fs-5">Placements</p>
-                </div>
-                <i
-                  class="fas fa-solid fa-briefcase fs-1 primary-text border rounded-full secondary-bg p-3"
-                ></i>
-              </div>
-            </div> -->
-
-            <!-- <div class="col-md-3">
-              <div
-                class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded"
-              >
-                <div>
-                  <h3 class="fs-2">Anouncements</h3>
-                  <p class="fs-5">NAAC Rating</p>
-                </div>
-                <i
-                  class="fas fa-solid fa-graduation-cap fs-1 primary-text border rounded-full secondary-bg p-3"
-                ></i>
-              </div>
-            </div> -->
-
-            <!-- <div class="col-md-3">
-              <div
-                class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded"
-              >
-                <div>
-                  <h3 class="fs-2">2900</h3>
-                  <p class="fs-5">Students</p>
-                </div>
-                <i
-                  class="fas fa-solid fa-people-group fs-1 primary-text border rounded-full secondary-bg p-3"
-                ></i>
-              </div>
-            </div>
-          </div> -->
-
-          <!-- MAKE CHANGES FROM HERE ON -->
-
+            
           <div id="calendar-container" class="validation-container valid" style="background-color: rgb(72, 0, 255);">
             <div id="calendar-icon" onclick="openGoogleCalendar()">
               <img src="calendar-icon.png" alt="calendar">
+            </div>
+          </div>
+
+          <div id="calendar-container" class="validation-container valid" style="background-color: rgb(72, 0, 255);">
+            <div id="calendar-icon">
+              <a
+            href="../teacher_pages/teacher_interest.php"
+            class="list-group-item list-group-item-action bg-transparent second-text fw-bold"
+            ><i class="fas fa-solid fa-address-card me-2"></i>Interest</a
+          >
             </div>
           </div>
 

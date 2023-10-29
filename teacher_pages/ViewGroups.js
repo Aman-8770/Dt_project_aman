@@ -2,7 +2,7 @@
 
 document.getElementById("groupFilter").addEventListener("change", function () {
   const selectedGroup = this.value;
-  const groups = document.querySelectorAll(".group");
+  const groups = document.querySelectorAll(".enrollemt");
 
   if (selectedGroup === "all") {
     groups.forEach((group) => (group.style.display = "block"));

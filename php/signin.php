@@ -1,4 +1,6 @@
 <?php
+
+session_start(); 
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -26,7 +28,7 @@ $result = mysqli_query($conn, $sql);
 
             if ($row['enrollment'] == $enrollment && $row['password'] == $password) {
 
-
+                $_SESSION['enrollment'] = $row['enrollment'];
                 header("Location: ../pages/dashboard.html?message:Login Successfully!!");
 
                 
@@ -34,7 +36,8 @@ $result = mysqli_query($conn, $sql);
 }
 else
 {
-header("location:../pages/signup.html?message:Login Fails!!");
+  header("Location: ../pages/login_alert.html?notify=success");
+  // header("location:../pages/signup.html?message:Login Fails!!");
 }
 }
 

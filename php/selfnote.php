@@ -1,4 +1,14 @@
 <?php
+
+session_start(); 
+
+if (!isset($_SESSION['enrollment'])) {
+    header("Location: ../pages/signin.html");
+    exit();
+}
+
+$enrollment = $_SESSION['enrollment'];
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Database connection details (modify with your own)
     $dbHost = "localhost";
@@ -13,24 +23,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
     }
-    //$groupno = 1;
 
     // Check if the GitHub link and Jira link have been provided
-   
-       
-        $note = $_POST["note"];
-        
-        // SQL query to insert data
-        $sql = "INSERT INTO selfnote (note ) VALUES ('$note')";
+    // $enrollment = 100;
+    $note = $_POST["note"];
 
-        if (mysqli_query($conn, $sql)) {
-            echo "Links inserted successfully.<br>";
-        } else {
-            echo "Error: " . mysqli_error($conn);
-        }
-     
+    // SQL query to insert data
+    $sql = "INSERT INTO selfnote (`enrollment`, `note`) VALUES ('$enrollment', '$note')";
 
-    // Close the database connection
-    mysqli_close($conn);
+    if (mysqli_query($conn, $sql)) {
+        // Data inserted successfully
+        mysqli_close($conn);
+        header("Location: ../pages/alert.html?notify=success"); // Redirect to the alert page
+        exit(); // Make sure to exit to prevent further script execution.
+    } else {
+        // Error occurred while inserting data
+        mysqli_close($conn);
+        echo "Error: " . mysqli_error($conn);
+    }
 }
 ?>

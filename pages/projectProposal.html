@@ -141,11 +141,7 @@
         <!-- MAKE CHANGES FROM HERE ON -->
         <div class="container p-4 w-75 vh-100">
           <div class="row h-75 align-items-center justify-content-center">
-            <form
-              class="my-auto"
-              action="../php/semesterRegistration.php"
-              method="POST"
-            >
+            <form class="my-auto" action="../php/submitpp.php" method="POST">
               <div class="row mb-3">
                 <label for="phoneNo" class="col-sm-3 col-form-label"
                   >Topic - 1 :</label
@@ -160,9 +156,9 @@
                   <input
                     class="form-control"
                     type="text"
-                    maxlength="10"
-                    id="phoneNo"
-                    name="phoneNo"
+                    maxlength="100"
+                    id="title1"
+                    name="title1"
                     required
                   />
                 </div>
@@ -176,9 +172,9 @@
                   <textarea
                     class="form-control"
                     type="text"
-                    maxlength="10"
-                    id="phoneNo"
-                    name="phoneNo"
+                    maxlength="1000"
+                    id="des1"
+                    name="des1"
                     required
                   ></textarea>
                 </div>
@@ -192,7 +188,8 @@
                 <div class="col-sm-9">
                   <input
                     type="file"
-                    name="upload"
+                    name="upload1"
+                    id="upload1"
                     accept="application/pdf,application/vnd.ms-excel"
                   />
                 </div>
@@ -212,9 +209,9 @@
                   <input
                     class="form-control"
                     type="text"
-                    maxlength="10"
-                    id="phoneNo"
-                    name="phoneNo"
+                    maxlength="100"
+                    id="title2"
+                    name="title2"
                     required
                   />
                 </div>
@@ -228,9 +225,9 @@
                   <textarea
                     class="form-control"
                     type="text"
-                    maxlength="10"
-                    id="phoneNo"
-                    name="phoneNo"
+                    maxlength="1000"
+                    id="des2"
+                    name="des2"
                     required
                   ></textarea>
                 </div>
@@ -244,7 +241,8 @@
                 <div class="col-sm-9">
                   <input
                     type="file"
-                    name="upload"
+                    name="upload2"
+                    id="upload2"
                     accept="application/pdf,application/vnd.ms-excel"
                   />
                 </div>
@@ -265,8 +263,8 @@
                     class="form-control"
                     type="text"
                     maxlength="10"
-                    id="phoneNo"
-                    name="phoneNo"
+                    id="title3"
+                    name="title3"
                     required
                   />
                 </div>
@@ -281,8 +279,8 @@
                     class="form-control"
                     type="text"
                     maxlength="10"
-                    id="phoneNo"
-                    name="phoneNo"
+                    id="des3"
+                    name="des3"
                     required
                   ></textarea>
                 </div>
@@ -296,235 +294,18 @@
                 <div class="col-sm-9">
                   <input
                     type="file"
-                    name="upload"
+                    name="upload3"
+                    id="upload3"
                     accept="application/pdf,application/vnd.ms-excel"
                   />
                 </div>
               </div>
 
-              <!-- <div class="row mb-3">
-                <label for="phoneNo" class="col-sm-3 col-form-label"
-                  >Student - 1</label
-                >
-                <label for="phoneNo">Name: </label>
-                <div class="s_1">
-                  <input
-                    class="form-control"
-                    type="text"
-                    maxlength="10"
-                    id="phoneNo"
-                    name="phoneNo"
-                    required
-                  />
-                </div>
-                <div class="s_1">
-                  <input
-                    class="form-control"
-                    type="text"
-                    maxlength="10"
-                    id="phoneNo"
-                    name="phoneNo"
-                    required
-                  />
-                </div>
-                <div class="s_1">
-                  <input
-                    class="form-control"
-                    type="text"
-                    maxlength="10"
-                    id="phoneNo"
-                    name="phoneNo"
-                    required
-                  />
-                </div>
-                <div class="s_1">
-                  <input
-                    class="form-control"
-                    type="text"
-                    maxlength="10"
-                    id="phoneNo"
-                    name="phoneNo"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div class="row mb-3">
-                <label for="branch" class="col-sm-3 col-form-label">CGPA</label>
-
-                <div class="C_1">
-                  <input
-                    class="form-control"
-                    type="number"
-                    id="branch"
-                    name="branch"
-                    required
-                  />
-                </div>
-                <div class="C_1">
-                  <input
-                    class="form-control"
-                    type="number"
-                    id="branch"
-                    name="branch"
-                    required
-                  />
-                </div>
-                <div class="C_1">
-                  <input
-                    class="form-control"
-                    type="number"
-                    id="branch"
-                    name="branch"
-                    required
-                  />
-                </div>
-                <div class="C_1">
-                  <input
-                    class="form-control"
-                    type="number"
-                    id="branch"
-                    name="branch"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div class="row mb-3">
-                <label for="currentYear" class="col-sm-3 col-form-label"
-                  >Skills</label
-                > -->
-              <!-- <div class="sk_1">
-                  <input
-                    class="form-control"
-                    type="text"
-                    id="currentYear"
-                    name="currentYear"
-                    required
-                  /><br />
-                </div>
-                <div class="sk_1">
-                  <input
-                    class="form-control"
-                    type="text"
-                    maxlength="1"
-                    id="currentYear"
-                    name="currentYear"
-                    required
-                  /><br />
-                </div>
-                <div class="sk_1">
-                  <input
-                    class="form-control"
-                    type="text"
-                    maxlength="1"
-                    id="currentYear"
-                    name="currentYear"
-                    required
-                  /><br />
-                </div>
-                <div class="sk_1">
-                  <input
-                    class="form-control"
-                    type="text"
-                    maxlength="1"
-                    id="currentYear"
-                    name="currentYear"
-                    required
-                  /><br />
-                </div> -->
-
-              <!-- <div class="C_1">
-                  <input
-                    class="form-control"
-                    type="text"
-                    id="branch"
-                    name="branch"
-                    required
-                  />
-                </div>
-                <div class="C_1">
-                  <input
-                    class="form-control"
-                    type="text"
-                    id="branch"
-                    name="branch"
-                    required
-                  />
-                </div>
-                <div class="C_1">
-                  <input
-                    class="form-control"
-                    type="text"
-                    id="branch"
-                    name="branch"
-                    required
-                  />
-                </div>
-                <div class="C_1">
-                  <input
-                    class="form-control"
-                    type="text"
-                    id="branch"
-                    name="branch"
-                    required
-                  />
-                </div>
-              </div> -->
-
-              <!-- <div class="row mb-3">
-                <label for="gender" class="col-sm-4 col-form-label"
-                  >Gender</label
-                >
-                <div class="col-sm-8 container-fluid">
-                  <div class="form-check form-check-inline col-sm-5">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      id="male"
-                      name="gender"
-                      value="M"
-                      required
-                    />
-                    <label class="form-check-label" for="male">Male</label>
-                  </div>
-
-                  <div class="form-check form-check-inline col-sm-4">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      id="female"
-                      name="gender"
-                      value="F"
-                      required
-                    />
-                    <label class="form-check-label" for="female">Female</label>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row mb-3">
-                <label for="feePaid" class="col-sm-4 col-form-label"
-                  >Fee paid</label
-                >
-                <div class="col-sm-8 container-fluid">
-                  <div class="form-check col-sm-5">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      id="yes"
-                      name="feePaid"
-                      value="1"
-                      required
-                    />
-                  </div>
-                </div>
-              </div> -->
-
               <div class="row justify-content-center py-5">
                 <button
                   class="btn btn-lg btn-primary w-25 primary-bg"
                   type="submit"
+                  name="submit"
                 >
                   Submit
                 </button>

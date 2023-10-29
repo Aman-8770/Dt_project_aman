@@ -13,7 +13,7 @@
 }
 
 .validation-container.valid {
-  background-color: rgb(205, 12, 12);
+  background-color: rgb(176, 205, 12);
 }
 
 .validation-container.invalid {

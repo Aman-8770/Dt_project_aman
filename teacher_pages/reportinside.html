@@ -1,3 +1,51 @@
+<?php
+session_start();
+
+if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['groupno'])) {
+    $groupno = $_GET['groupno'];
+
+    // Database connection
+    $dbHost = "localhost";
+    $dbUsername = "root";
+    $dbPassword = "";
+    $dbName = "project_management_system_db";
+
+    $conn = mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName);
+
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
+    // Fetch data based on the group number
+    $query = "SELECT * FROM submitreport WHERE groupno = $groupno";
+    $result = mysqli_query($conn, $query);
+
+    if (!$result) {
+        echo "Error fetching data: " . mysqli_error($conn);
+        exit();
+    }
+
+    if ($row = mysqli_fetch_assoc($result)) {
+        // Get data from the database
+        $groupno = $row['groupno'];
+        $title = $row['title'];
+        $githublink = $row['githublink'];
+        $jiralink = $row['jiralink'];
+        $s1_cont = $row['s1_cont'];
+        $s2_cont = $row['s2_cont'];
+        $s3_cont = $row['s3_cont'];
+        $s4_cont = $row['s4_cont'];
+        $pdf_file = $row['pdf_file'];
+    } else {
+        echo "No data found for group number: $groupno";
+        exit();
+    }
+} else {
+    echo "Invalid request.";
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,51 +73,13 @@
 
     <link rel="stylesheet" href="../styles/style.css" />
     <link rel="stylesheet" href="../styles/all.css" />
-    <title>View reports</title>
+    <title>Group Report</title>
   </head>
 
   <body>
     <div class="d-flex" id="wrapper">
-      <!-- Sidebar -->
-      <div class="bg-white" id="sidebar-wrapper">
-        <div
-          class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"
-        >
-          <i class="fa-solid fa-building-columns"></i>&nbsp;UG
-        </div>
-        <div class="list-group list-group-flush my-3">
-          <a
-            href="../teacher_pages/dashboard.html"
-            class="list-group-item list-group-item-action bg-transparent second-text fw-bold"
-            ><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a
-          >
-
-          <a
-            href="../teacher_pages/ViewGroups.html"
-            class="list-group-item list-group-item-action bg-transparent second-text fw-bold"
-            ><i class="fas fa-brands fa-wpforms me-2"></i>View groups </a
-          >
-
-          <a
-            href="../teacher_pages/Uploadrubrics.html"
-            class="list-group-item list-group-item-action bg-transparent second-text fw-bold"
-            ><i class="fas fa-solid fa-scroll me-2"></i>Upload rubrics</a
-          >
-
-          <a
-            href="../teacher_pages/ViewReport.html"
-            class="list-group-item list-group-item-action bg-transparent second-text fw-bold active"
-            ><i class="fas fa-solid fa-address-card me-2"></i>View report</a
-          >
-
-          <a
-            href="../teacher_pages/signin.html"
-            class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"
-            ><i class="fas fa-power-off me-2"></i>Logout</a
-          >
-        </div>
-      </div>
-      <!-- /#sidebar-wrapper -->
+      <!-- Sidebar (if needed) -->
+      <!-- ... (Sidebar code here) -->
 
       <!-- Page Content -->
       <div id="page-content-wrapper">
@@ -81,101 +91,75 @@
               class="fas fa-solid fa-bars primary-text fs-4 me-3"
               id="menu-toggle"
             ></i>
-            <!-- <h2 class="fs-2 m-0">View reports</h2> -->
             <h3>Group Report Information</h3>
           </div>
 
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link second-text fw-bold"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <i class="fas fa-user me-2"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
+          <!-- ... (Rest of the navigation bar) -->
         </nav>
 
         <div class="container-fluid px-4">
           <div class="row g-3 my-2">
             <div class="d-flex" id="wrapper">
-                <!-- <div id="page-content-wrapper"> -->
-          
-                  <div class="container-fluid px-4">
-                    
-                    <div class="mt-4">
-                      
-                      <!-- Display group information here -->
-                      <p><strong>Group Number:</strong> 1</p>
-                      <p><strong>Project Title:</strong> Sample Project Title</p>
-                      <p>
-                        <strong>Github Link:</strong>
-                        <a href="#">https://github.com/sample</a>
-                      </p>
-                      <p>
-                        <strong>JIRA Link:</strong>
-                        <a href="#">https://jira.com/sample</a>
-                      </p>
-                    </div>
-          
-                    <div class="mt-4">
-                      <h3>Individual Contribution</h3>
-                      <!-- Display individual contributions for each student in the group -->
-                      <h4>Student 1</h4>
-                      <p>Student 1's contribution details go here.</p>
-          
-                      <h4>Student 2</h4>
-                      <p>Student 2's contribution details go here.</p>
-          
-                      <h4>Student 3</h4>
-                      <p>Student 3's contribution details go here.</p>
-          
-                      <h4>Student 4</h4>
-                      <p>Student 4's contribution details go here.</p>
-                    </div>
-          
-                    <div class="mt-4">
-                      <h3>Uploaded Report</h3>
-                      <!-- Display the uploaded report here -->
-                      <a href="#" download>Download Project Report</a>
-                    </div>
-                  </div>
-                <!-- </div> -->
-            </div>
+              <!-- <div id="page-content-wrapper"> -->
 
+              <div class="container-fluid px-4">
+                <div class="mt-4">
+                  <!-- Display group information here -->
+                  <p>
+                    <strong>Group Number:</strong>
+                    <?php echo $groupno; ?>
+                  </p>
+                  <p>
+                    <strong>Project Title:</strong>
+                    <?php echo $title; ?>
+                  </p>
+                  <p>
+                    <strong>Github Link:</strong>
+                    <a href="<?php echo $githublink; ?>" target="_blank"
+                      ><?php echo $githublink; ?></a
+                    >
+                  </p>
+                  <p>
+                    <strong>JIRA Link:</strong>
+                    <a href="<?php echo $jiralink; ?>" target="_blank"
+                      ><?php echo $jiralink; ?></a
+                    >
+                  </p>
+                </div>
+
+                <div class="mt-4">
+                  <h3>Individual Contribution</h3>
+                  <!-- Display individual contributions for each student in the group -->
+                  <h4>Student 1</h4>
+                  <p><?php echo $s1_cont; ?></p>
+
+                  <h4>Student 2</h4>
+                  <p><?php echo $s2_cont; ?></p>
+
+                  <h4>Student 3</h4>
+                  <p><?php echo $s3_cont; ?></p>
+
+                  <h4>Student 4</h4>
+                  <p><?php echo $s4_cont; ?></p>
+                </div>
+
+                <div class="mt-4">
+                  <h3>Uploaded Report</h3>
+                  <!-- Display the uploaded report here -->
+                  <a href="<?php echo $pdf_file; ?>" download
+                    >Download Project Report</a
+                  >
+                </div>
+              </div>
+              <!-- </div> -->
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- /#page-content-wrapper -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      var el = document.getElementById("wrapper");
-      var toggleButton = document.getElementById("menu-toggle");
-
-      toggleButton.onclick = function () {
-        el.classList.toggle("toggled");
-      };
-    </script>
+    <!-- ... (Rest of your JavaScript and closing </body> and </html> tags) -->
   </body>
 </html>

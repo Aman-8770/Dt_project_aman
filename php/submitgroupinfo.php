@@ -16,6 +16,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $success = true; // Variable to track success
 
+    // Find the maximum group number in the table
+    $maxGroupNoQuery = "SELECT MAX(groupno) FROM submitgroupinfo";
+    $maxGroupNoResult = mysqli_query($conn, $maxGroupNoQuery);
+
+    if ($maxGroupNoResult) {
+        $maxGroupNoRow = mysqli_fetch_array($maxGroupNoResult);
+        $groupno = $maxGroupNoRow[0] + 1; // Increment the maximum group number by 1
+    } else {
+        // If there are no existing groups, start with group number 1
+        $groupno = 2;
+    }
+
     // Loop to insert data for each student
     for ($i = 1; $i <= 4; $i++) {
         // Modify these variables with the actual form field names
@@ -25,8 +37,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $skills = $_POST["skills" . $i];
         $areaofinterest = $_POST["areaofinterest" . $i];
 
-        // SQL query to insert data
-        $sql = "INSERT INTO submitgroupinfo (name, enrollment, cgpa, skills, areaofinterest) VALUES ('$name', '$enrollment', '$cgpa', '$skills', '$areaofinterest')";
+        // SQL query to insert data with group number
+        $sql = "INSERT INTO submitgroupinfo (groupno, name, enrollment, cgpa, skills, areaofinterest) VALUES ('$groupno', '$name', '$enrollment', '$cgpa', '$skills', '$areaofinterest')";
 
         if (!mysqli_query($conn, $sql)) {
             $success = false; // Mark as unsuccessful if any insert fails

@@ -138,314 +138,145 @@
 
         <div class="container-fluid px-4">
           <div class="row mb-3">
-            <label for="phoneNo" class="col-sm-3 col-form-label"
-              >Project Title</label
+
+
+            <form
+              class="my-auto"
+              action="../php/submitreport.php"
+              method="POST"
+              enctype="multipart/form-data"
             >
-            <div class="s_1">
-              <input
-                class="form-control"
-                type="text"
-                maxlength="100"
-                id="phoneNo"
-                name="phoneNo"
-                required
-              />
-            </div>
-          </div>
 
-          <!-- <div class="container-fluid px-4"> -->
-            <!-- <div class="row mb-3">
-              <label for="phoneNo" class="col-sm-3 col-form-label">
-                Enter github link</label>
-              <input type="url">
-            </div> -->
-
-            <div class="row mb-3">
               <label for="phoneNo" class="col-sm-3 col-form-label"
-                >Enter github link</label
+                >Project Title</label
               >
               <div class="s_1">
                 <input
                   class="form-control"
-                  type="url"
-                  maxlength="1000"
-                  id="phoneNo"
-                  name="phoneNo"
+                  type="text"
+                  maxlength="100"
+                  id="title"
+                  name="title"
                   required
                 />
               </div>
-              <!-- <div class="s_1">
-                <input
-                  class="form-control"
-                  type="text"
-                  maxlength="10"
-                  id="phoneNo"
-                  name="phoneNo"
-                  required
-                />
-              </div> -->
-              <!-- <input type="url"> -->
-            <!-- </div> -->
-
-            <!-- <div class="row mb-3">
-              <label for="phoneNo" class="col-sm-3 col-form-label"
-                >Enter JIRA link</label
-              >
-              <input type="url">
-            </div> -->
-
-            <div class="row mb-3">
-              <label for="phoneNo" class="col-sm-3 col-form-label"
-                >Enter JIRA link</label
-              >
-              <div class="s_1">
-                <input
-                  class="form-control"
-                  type="url"
-                  maxlength="1000"
-                  id="phoneNo"
-                  name="phoneNo"
-                  required
-                />
-                <br>
-              </div>
-
-              <!-- <div class="s_1">
-                <input
-                  class="form-control"
-                  type="text"
-                  maxlength="10"
-                  id="phoneNo"
-                  name="phoneNo"
-                  required
-                />
-            
-             
-
-            <!-- <div class="container-fluid px-4"> -->
-              <!-- <div class="row mb-3">
-                <label for="phoneNo" class="col-sm-3 col-form-label">
-                   Upload your report here</label>
-                <input type="file" name="upload" accept="application/pdf,application/vnd.ms-excel" />
-              </div> -->
-          
-
-           
-          <!-- For demo purpose -->
-          <!-- <div>
-            <div class="row text-center text-white">
-              <div class="col-lg-8 mx-auto"></div>
-            </div>
-          </div> -->
-          <!-- End -->
-<!-- 
-          <div class="container">
-            <div class="row text-center">
-              <!-- Team item -->
-              <!-- <div class="col-xl-3 col-sm-6 mb-5">
-                <div class="bg-white rounded shadow-sm py-5 px-4">
-                  <img
-                    src="../images/abhinav_raj.jpg"
-                    alt=""
-                    class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
-                    width="100"
-                  />
-                  <h5 class="mb-0">Abhinav Raj</h5>
-                  <span class="small text-muted">+91 8709182266</span>
-                  <ul class="social mb-0 list-inline mt-3">
-                    <a href="https://github.com/ARP1208"
-                      ><img
-                        src="../images/github.png"
-                        alt="gitprof"
-                        width="90"
-                        height="50"
-                    /></a>
-                  </ul>
-                </div>
-              </div> -->
-              <!-- End -->
-
-              <!-- Team item -->
-              <!-- <div class="col-xl-3 col-sm-6 mb-5">
-                <div class="bg-white rounded shadow-sm py-5 px-4">
-                  <img
-                    src="../images/bhupesh_sahu.jpeg"
-                    alt=""
-                    class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
-                    width="100"
-                  />
-                  <h5 class="mb-0">Bhupesh Sahu</h5>
-                  <span class="small text-muted">+91 7987638681</span>
-                  <ul class="social mb-0 list-inline mt-3">
-                    <a href="https://github.com/bhupesh-sahu-3"
-                      ><img
-                        src="../images/github.png"
-                        alt="gitprof"
-                        width="90"
-                        height="45"
-                    /></a>
-                  </ul>
-                </div>
-              </div> -->
-              <!-- End -->
-
-              <!-- Team item -->
-              <!-- <div class="col-xl-3 col-sm-6 mb-5">
-                <div class="bg-white rounded shadow-sm py-5 px-4">
-                  <img
-                    src="../images/monirul_islam.jpeg"
-                    alt=""
-                    class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
-                    width="100"
-                  />
-                  <h5 class="mb-0">Md. Monirul Islam</h5>
-                  <span class="small text-muted">+91 6003687977</span>
-                  <ul class="social mb-0 list-inline mt-3">
-                    <a href="https://github.com/sleepy-coder-101"
-                      ><img
-                        src="../images/github.png"
-                        alt="gitprof"
-                        width="90"
-                        height="50"
-                    /></a>
-                  </ul>
-                </div> -->
               <!-- </div> -->
-              <!-- End -->
 
-              <!-- Team item -->
-              <!-- <div class="col-xl-3 col-sm-6 mb-5">
-                <div class="bg-white rounded shadow-sm py-5 px-4">
-                  <img
-                    src="../images/shashwat_sarkar.jpeg"
-                    alt=""
-                    class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
-                    width="100"
-                  />
-                  <h5 class="mb-0">Shashwat Sarkar</h5>
-                  <span class="small text-muted">+91 8451945225</span>
-                  <ul class="social mb-0 list-inline mt-3">
-                    <a href="https://github.com/shshwtsrkr"
-                      ><img
-                        src="../images/github.png"
-                        alt="gitprof"
-                        width="90"
-                        height="50"
-                    /></a>
-                  </ul>
+              <!-- <div class="container-fluid px-4"> -->
+                <!-- <div class="row mb-3">
+                  <label for="phoneNo" class="col-sm-3 col-form-label">
+                    Enter github link</label>
+                  <input type="url">
                 </div> -->
-              <!-- </div>
-              End
-            </div> -->
-          <!-- </div>
-        </div> -->
 
-        
-        <div class="row mb-3">
-          <label for="phoneNo"
-            >Enter individual contribution</label
-          >
-          </div>
+              <div class="row mb-3">
+                <label for="phoneNo" class="col-sm-3 col-form-label"
+                  >Enter github link</label
+                >
+                <div class="s_1">
+                  <input
+                    class="form-control"
+                    type="text"
+                    maxlength="1000"
+                    id="githublink"
+                    name="githublink"
+                    required
+                  />
+              </div>
+                <!-- <div class="s_1">
+                  <input
+                    class="form-control"
+                    type="text"
+                    maxlength="10"
+                    id="phoneNo"
+                    name="phoneNo"
+                    required
+                  />
+                </div> -->
+                <!-- <input type="url"> -->
+              <!-- </div> -->
 
-          <!-- <div class="row mb-3">
-            <label for="phoneNo" class="col-sm-3 col-form-label"
-              >Student-1 :</label>
-          </div>
-            <textarea
-              class="form-control"
-              type="text"
-              maxlength="1000"
-              id="phoneNo"
-              name="phoneNo"
-              required
-            ></textarea>
-          </div> -->
+              <!-- <div class="row mb-3">
+                <label for="phoneNo" class="col-sm-3 col-form-label"
+                  >Enter JIRA link</label
+                >
+                <input type="url">
+              </div> -->
 
-          <label for="student1">Student 1:</label>
-          <textarea id="student1" name="student1" rows="4" cols="50"></textarea>
+              <div class="row mb-3">
+                <label for="phoneNo" class="col-sm-3 col-form-label"
+                  >Enter JIRA link</label
+                >
+                <div class="s_1">
+                  <input
+                    class="form-control"
+                    type="text"
+                    maxlength="1000"
+                    id="jiralink"
+                    name="jiralink"
+                    required
+                  />
+                  <br>
+                </div>
+              </div>
 
+                
 
-          <label for="student1">Student 2:</label>
-          <textarea id="student1" name="student1" rows="4" cols="50"></textarea>
-
-          <label for="student1">Student 3:</label>
-          <textarea id="student1" name="student1" rows="4" cols="50"></textarea>
-
-          <label for="student1">Student 4:</label>
-          <textarea id="student1" name="student1" rows="4" cols="50"></textarea>
-        
-          
-
-          <!-- <div class="container">
-            <h2>Student Input Form</h2>
-            <form>
                 <label for="student1">Student 1:</label>
-                <textarea id="student1" name="student1" rows="4" cols="50"></textarea>
-        
-                <label for="student2">Student 2:</label>
-                <textarea id="student2" name="student2" rows="4" cols="50"></textarea>
-        
-                <label for="student3">Student 3:</label>
-                <textarea id="student3" name="student3" rows="4" cols="50"></textarea>
-        
-                <label for="student4">Student 4:</label>
-                <textarea id="student4" name="student4" rows="4" cols="50"></textarea>
-        
-                <input type="submit" value="Submit">
-            </form>
-        </div> -->
+                <textarea id="s1_cont" name="s1_cont" rows="4" cols="50"></textarea>
+
+
+                <label for="student1">Student 2:</label>
+                <textarea id="s2_cont" name="s2_cont" rows="4" cols="50"></textarea>
+
+                <label for="student1">Student 3:</label>
+                <textarea id="s3_cont" name="s3_cont" rows="4" cols="50"></textarea>
+
+                <label for="student1">Student 4:</label>
+                <textarea id="s4_cont" name="s4_cont" rows="4" cols="50"></textarea>
           
 
-          <!-- <div class="s_1">
-            <textarea
-              class="form-control"
-              type="text"
-              maxlength="1000"
-              id="phoneNo"
-              name="phoneNo"
-              required
-            ></textarea>
+              <!-- <div class="container">
+                <h2>Student Input Form</h2>
+                <form>
+                    <label for="student1">Student 1:</label>
+                    <textarea id="student1" name="student1" rows="4" cols="50"></textarea>
+            
+                    <label for="student2">Student 2:</label>
+                    <textarea id="student2" name="student2" rows="4" cols="50"></textarea>
+            
+                    <label for="student3">Student 3:</label>
+                    <textarea id="student3" name="student3" rows="4" cols="50"></textarea>
+            
+                    <label for="student4">Student 4:</label>
+                    <textarea id="student4" name="student4" rows="4" cols="50"></textarea>
+            
+                    <input type="submit" value="Submit">
+                </form>
+            </div> -->  
+          
+
+          
+            </div>
+
+            <div class="row mb-3">
+              <label for="phoneNo" class="col-sm-3 col-form-label">
+                Upload your report here</label>
+              <input type="file" name="pdf_file" id="pdf_file" accept="application/pdf,application/vnd.ms-excel" />
+            </div>
+
+            <div class="row justify-content-center py-5">
+              <button
+              class="btn btn-lg btn-primary w-25 primary-bg"
+                type="submit"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+
           </div>
-
-          <div class="s_1">
-            <textarea
-              class="form-control"
-              type="text"
-              maxlength="1000"
-              id="phoneNo"
-              name="phoneNo"
-              required
-            ></textarea>
-          </div>
-          <div class="s_1">
-            <textarea
-              class="form-control"
-              type="text"
-              maxlength="1000"
-              id="phoneNo"
-              name="phoneNo"
-              required
-            ></textarea>
-          </div> -->
         </div>
-
-        <div class="row mb-3">
-          <label for="phoneNo" class="col-sm-3 col-form-label">
-             Upload your report here</label>
-          <input type="file" name="upload" accept="application/pdf,application/vnd.ms-excel" />
-        </div>
-
-        <div class="row justify-content-center py-5">
-          <button
-          class="btn btn-lg btn-primary w-25 primary-bg"
-            type="submit"
-          >
-            Submit
-          </button>
-        </div>
-
-      </div>
-    </div>
 
     
   </body>
